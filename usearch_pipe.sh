@@ -14,6 +14,11 @@ source activate qiime2-2021.8
 # Navigate to working directory
 cd /work/mat19/usearchtest 
 
+# Set directory to TMPDIR 
+
+export TMPDIR='/usearchtest' 
+echo $TMPDIR
+
 #Naviage to raw_reads data
 
 #Quality 
@@ -61,6 +66,7 @@ usearch -otutab 200bp_merged.fq -zotus zotus.fa -otutabout zotutab.txt -biomout 
 #Import ZOTU to Qiime
 echo "Import ZOTU to Qiime"
 qiime tools import --input-path zotus.fa --output-path zotus.qza --type 'FeatureData[Sequence]'
+
 
 #Qiime Taxonomy 
 echo "Qiime Taxonomy"
