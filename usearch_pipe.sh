@@ -16,7 +16,7 @@ cd /work/mat19/usearchtest
 
 # Set directory to TMPDIR 
 
-export TMPDIR='/usearchtest' 
+export TMPDIR='/data' 
 echo $TMPDIR
 
 #Naviage to raw_reads data
