@@ -16,7 +16,7 @@ cd /work/mat19/usearchtest
 
 # Set directory to TMPDIR 
 
-export TMPDIR='/data' 
+export TMPDIR='/local/mat19' 
 echo $TMPDIR
 
 #Naviage to raw_reads data
@@ -67,6 +67,9 @@ usearch -otutab 200bp_merged.fq -zotus zotus.fa -otutabout zotutab.txt -biomout 
 echo "Import ZOTU to Qiime"
 qiime tools import --input-path zotus.fa --output-path zotus.qza --type 'FeatureData[Sequence]'
 
+# Move to local/mat19
+
+cd /local/mat19
 
 #Qiime Taxonomy 
 echo "Qiime Taxonomy"
